@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enhanced HTML5 Page with Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header, footer {
+      background-color: #005f73;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+
+    main {
+      padding: 2em;
+    }
+
+    section {
+      margin-bottom: 2em;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1em;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.75em;
+      text-align: left;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 1.5em;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    fieldset {
+      margin-bottom: 1.5em;
+      padding: 1em;
+      border: 1px solid #ccc;
+    }
+
+    label {
+      display: block;
+      margin-top: 0.5em;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 0.5em;
+      margin-top: 0.2em;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #0a9396;
+      color: white;
+      border: none;
+      padding: 0.75em 1.5em;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #007f8c;
+    }
+
+    .media {
+      display: flex;
+      gap: 1em;
+      flex-wrap: wrap;
+    }
+
+    .media img, .media video {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to My Multi-Section Web Page</h1>
+    <p>Showcasing HTML5 features: Lists, Tables, Media, and Forms</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>My Favorite Hobbies</h2>
+      <ul>
+        <li>Photography</li>
+        <li>Traveling</li>
+        <li>Reading Sci-fi Novels</li>
+        <li>Cooking International Dishes</li>
+      </ul>
+
+      <h3>Steps to Start a Photography Project</h3>
+      <ol>
+        <li>Choose a theme or subject</li>
+        <li>Scout locations</li>
+        <li>Plan your shots</li>
+        <li>Capture and edit photos</li>
+        <li>Publish or print</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Weekly Meal Plan</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Breakfast</th>
+            <th>Lunch</th>
+            <th>Dinner</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td>Oatmeal & Berries</td>
+            <td>Grilled Chicken Salad</td>
+            <td>Stir-fried Veggies & Rice</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>Greek Yogurt & Granola</td>
+            <td>Turkey Sandwich</td>
+            <td>Spaghetti Bolognese</td>
+          </tr>
+          <!-- Add more rows as needed -->
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Media Gallery</h2>
+      <div class="media">
+        <img src="https://via.placeholder.com/300x200.png?text=Sample+Image" alt="Sample placeholder image" />
+        <video controls width="300">
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contact & Registration Form</h2>
+      <form action="#" method="post" autocomplete="on">
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" required placeholder="John Doe" minlength="3" />
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required placeholder="you@example.com" />
+
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="e.g., 555-123-4567" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Account Setup</legend>
+
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required minlength="4" maxlength="15" />
+
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required minlength="6" />
+
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" name="confirm_password" required minlength="6" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferences</legend>
+
+          <label for="country">Country</label>
+          <select id="country" name="country" required>
+            <option value="">--Please choose--</option>
+            <option value="us">United States</option>
+            <option value="uk">United Kingdom</option>
+            <option value="ca">Canada</option>
+          </select>
+
+          <label for="newsletter">
+            <input type="checkbox" id="newsletter" name="newsletter" />
+            Subscribe to newsletter
+          </label>
+
+          <label>Preferred Contact Method</label>
+          <label><input type="radio" name="contact_method" value="email" checked /> Email</label>
+          <label><input type="radio" name="contact_method" value="phone" /> Phone</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Additional Comments</legend>
+          <label for="comments">Your Message</label>
+          <textarea id="comments" name="comments" rows="4" maxlength="500" placeholder="Write your message here..."></textarea>
+
+          <label for="referral">How did you hear about us?</label>
+          <input type="text" id="referral" name="referral" readonly value="Online Search" />
+        </fieldset>
+
+        <input type="submit" value="Submit Form" />
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My HTML5 Showcase Page. All rights reserved.</p>
+  </footer>
+</body>
+</html>
